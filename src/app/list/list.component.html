@@ -1,0 +1,10 @@
+<h5>List Component</h5>
+<div *ngIf="cars.length > 0; then carList; else noCars;">No cars added yet</div>
+<ng-template #carList>
+    <ul>
+        <li *ngFor="let car of cars">{{car}}</li>
+    </ul>
+</ng-template>  
+<ng-template #noCars>
+    <p>No cars added yet</p>
+</ng-template>
